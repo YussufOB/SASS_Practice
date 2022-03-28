@@ -1,0 +1,19 @@
+$bg-color: aqua;
+$text-color: red;
+$font-weight: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 900
+);
+
+body {
+  background-color: $bg-color;
+  color: $text-color;
+  font-weight: map-get($font-weight, regular);
+
+  h1 {
+    color: $text-color;
+    font-weight: map-get($font-weight, bold);
+  }
+}
+
