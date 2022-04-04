@@ -1,0 +1,29 @@
+.home {
+  height: 100%;
+  padding-top: 40vh;;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+  background: 
+    linear-gradient(
+      to right,
+      rgba($primary-color, 0.9),
+      rgba($primary-color, 0.3)
+    ),
+    url('../images/Illustration-header.svg') center top;
+  background-size: cover;
+
+  &_name {
+    font-size: 3rem;
+    padding-bottom: 1rem;
+    margin-top: 3rem;
+    line-height: 50px;
+    border-bottom: 1px solid setTextColor($primary-color);
+
+    &--nickname {
+      color: $secodary-color;
+      font-weight: 700;
+      margin-top: 1.4rem;
+    }
+  }
+}

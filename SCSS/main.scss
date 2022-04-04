@@ -1,19 +1,70 @@
-$bg-color: aqua;
-$text-color: red;
-$font-weight: (
-  "regular": 400,
-  "medium": 500,
-  "bold": 900
-);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+
+@import './resets';
+@import './variables';
+@import './home';
+@import './menu';
+
 
 body {
-  background-color: $bg-color;
-  color: $text-color;
-  font-weight: map-get($font-weight, regular);
-
-  h1 {
-    color: $text-color;
-    font-weight: map-get($font-weight, bold);
-  }
+  background: $primary-color;
+  color: setTextColor($primary-color);
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5rem;
 }
 
+h1, h2, h3 {
+  font-weight: 400;
+}
+
+a {
+  color: setTextColor($primary-color);
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 1rem;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+
+  .social-icons {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+
+    a {
+      padding: 0.4rem;
+      @include transition-ease;
+
+      &:hover {
+        color: $secodary-color;
+      }
+
+    }
+
+  }
+
+  footer {
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0.4rem;
+    right: 1rem;
+    text-align: right;
+    padding: 1rem;
+    color: setTextColor($primary-color);
+  }
+
+}
